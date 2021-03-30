@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Event Tickets Order Form</title>
+		<link rel="stylesheet" type="text/css" href="styles/normalize.css">
+		<link rel="stylesheet" type="text/css" href="styles/main.css">		
+	</head>
+	
+	<body>
+		<div id="frame">
+			<header>
+				<img src="images/ornament-logo.png" alt="New Year Central Logo" style="width: 400px;">
+				<div id="header-line-1">New Year Central</div>
+				<div id="header-line-2">For the child in all of us!</div>
+			</header>
+			
+			<!-- Navigation Starts -->
+			<nav id="nav_menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about_us.html">About Us</a></li>
+					<li><a href="products.html">Our Products</a></li>
+					<li><a href="tickets_order_form.html" class="current">Event Tickets</a></li>
+					<li><a href="contact_us.html">Contact Us</a></li>
+				</ul>
+			</nav>
+			
+			<aside>
+				<div class="sidebar-title">Products of The Week...</div>
+				<ul>
+					<li><a href="assets/products/berry-garland.html">Natural Holly Berry Garland, 5f - $74.99</a></li>
+					<li><a href="assets/products/artificial-red-berry-garland.html">Artificial Red Berry and White Edge Holly Leaf Christmas Garland, 5.5f - $38.99</a></li>
+					<li><a href="assets/products/christmas-berries-stems.html">Christmas Berries Red Stems Evergreen Pine Branches, 8pcs - $15.99</a></li>
+				</ul>
+			</aside>
+			
+			<main>
+				<h1>Order Event Tickets</h1>
+				<!-- The form starts here... -->
+				<form name="order_form" action="place_order.html" method="post">
+				
+				<!-- Collect Member Information -->
+					<fieldset>
+						<legend>Member Information</legend>
+						
+						<label for="email">E-Mail:</label>
+						<input type="email" name="email" id="email" autofocus required><br>
+						
+						<label for="first_name">First Name:</label>
+						<input type="text" name="first_name" id="first_name" required><br>
+						
+						<label for="last_name">Last Name:</label>
+						<input type="text" name="last_name" id="last_name" required><br>
+						
+						<label for="address">Address:</label>
+						<input type="text" name="address" id="address"><br>
+						
+						<label for="city">City:</label>
+						<input type="text" name="city" id="city" required><br>
+						
+						<label for="province">Province:</label>
+						<input type="text" name="province" id="province" maxlength="2" placeholder="2-character code" title="Example: QC" required><br>
+						
+						<label for="postal_code">Postal Code:</label>
+						<input type="text" name="postal_code" id="postal_code" placeholder="6 characters" pattern="[A-Za-z0-9]{6}" title="Example: N2K3R7" required><br>
+						
+						<label for="phone">Phone Number:</label>
+						<input type="tel" name="phone" id="phone" placeholder="999-999-9999" pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Example: 519-123-4567"><br>
+					</fieldset>
+					
+					<!-- Collect Ordering Information -->
+					<fieldset>
+						<legend>Ordering Information</legend>
+						
+						<label for="event_type">Event:</label>
+						<select name="event_type" id="event_type">
+							<option value="cookie_decorating_contest">Cookie Decoration Contest</option>
+							<option value="tree_decorating_contest">Tree Decoration Contest</option>
+							<option value="gift_of_light_ride_along">Gift of Light Ride-Along</option>
+							<option value="breakfast_with_santa">Breakfast with Santa</option>
+						</select><br>
+						
+						<label for="order_type">Order Type:</label>
+						<select name="order_type" id="order_type">
+							<option value="member_package">Member Package</option>
+							<option value="donor_package">Donor Package</option>
+							<option value="single_tickets">Single Tickets</option>
+						</select><br>
+						
+						<label for="num_tickets">Number of Tickets:</label>
+						<input type="number" name="num_tickets" id="num_tickets" placeholder="Number of single tickets" title="Only numeric values accepted"><br>
+					</fieldset>
+					
+					<!-- Collect Payment Method -->
+					<fieldset id="payment_method">
+						<legend>Payment Method</legend>
+						
+						<input type="radio" id="payment1" name="payment" value="bill_me">
+						<label for="payment1">Bill Me</label>
+						
+						<input type="radio" id="payment2" name="payment" value="credit_card">
+						<label for="payment2">Credit Card</label>
+					</fieldset>
+					
+					<!-- Collect Credit Card Information -->
+					<fieldset>
+						<legend>Credit Card Information</legend>
+						
+						<label for="card_type">Card Type:</label>
+						<select name="card_type" id="card_type">
+							<option value="visa">Visa</option>
+							<option value="master_card">Master Card</option>
+							<option value="discover">Discover</option>
+						</select><br>
+						
+						<label for="card_number">Card Number:</label>
+						<input type="text" name="card_number" id="card_number" pattern="^\d{4}-\d{4}-\d{4}-\d{4}$" placeholder="16 digits" title="Example: 1234-5678-9123-4567" required><br>					
+						
+					<label for="card_expiration_month">Expiration Date:</label>
+						<select name="card_expiration_month" id="card_expiration_month">
+							<option value="expiration_january">January</option>
+							<option value="expiration_february">February</option>
+							<option value="expiration_march">March</option>
+							<option value="expiration_april">April</option>
+							<option value="expiration_may">May</option>
+							<option value="expiration_june">June</option>
+							<option value="expiration_july">July</option>
+							<option value="expiration_august">August</option>
+							<option value="expiration_september">September</option>
+							<option value="expiration_october">October</option>
+							<option value="expiration_november">November</option>
+							<option value="expiration_december">December</option>
+						</select>
+					<label for="card_expiration_year"></label>
+						<select name="card_expiration_year" id="card_expiration_year">
+							<option value="expiration_2021">2021</option>
+							<option value="expiration_2022">2022</option>
+							<option value="expiration_2023">2023</option>
+							<option value="expiration_2024">2024</option>
+							<option value="expiration_2025">2025</option>
+							<option value="expiration_2026">2026</option>
+							<option value="expiration_2027">2027</option>
+						</select><br>
+					</fieldset>
+					
+					<!-- Checkout -->
+					<fieldset>
+						<legend>Submit Your Order</legend>
+						<input type="submit" id="submit_button" value="Submit">
+						<input type="reset" id="reset_button" value="Reset Fields">
+					</fieldset>
+				</form>
+				
+			</main>
+			
+			<footer>
+				<p>&copy; 2021 New Year Central. Created by Johnny White.</p>
+			</footer>
+		</div>
+	</body>
+</html>
